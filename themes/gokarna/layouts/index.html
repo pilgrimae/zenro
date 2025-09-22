@@ -1,0 +1,214 @@
+{{ define "main" }}
+<section class="home-about">
+  <div id="sahasrara" class="main-avatar avatar">
+    {{ if isset .Site.Params "avatarurl" }}
+    <img id="avatar" class={{ .Site.Params.AvatarSize | default "size-m" }} src='{{ .Scratch.Get "avatarImgSrc" }}'
+      alt="{{ .Site.Params.AvatarAltText|default " avatar" }}">
+    {{ end }}
+  </div>
+
+  <h1>{{ .Site.Title }}</h1>
+  {{ if isset .Site.Params "description" }}
+  <h3>{{ .Site.Params.Description }}</h3>
+  {{ end }}
+
+</section>
+
+<div class="flex-break"></div>
+
+{{ if isset .Site.Params "socialicons" }}
+<div class="social-icons">
+  <ul class="social-icons-list">
+    {{ range .Site.Params.SocialIcons }}
+    <li class="social-icon">
+      <a href="{{ .url }}" {{ if .rel }}rel="{{ .rel }}" {{ end }} aria-label="learn more on {{ .name }}">
+        <img class="svg-inject" src="/svg/icons/{{ .name }}.svg" alt="">
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
+
+{{ if os.FileExists "index-about.md" }}
+<div class="markdown-content">
+  {{ readFile "index-about.md" | markdownify }}
+</div>
+{{ end }}
+
+<div class="home-content">
+  <div id="path777" class="duck-break" onClick="rubber('空践');">☷☵☲<a href="#空践">
+    <span class="enso-inline">
+      <img src="/svg/icons/circle.svg" class="enso-icon" />
+      <span class="middle-path">☰</span>
+    </span>
+  </a>☲☵☷</div>
+
+  <div id="空践">
+    <p>それは逃避ではなく、回帰への引力を感じる者のために。</p>
+    <p>ゆっくりと歩き、誠実に語り、存在によって記憶する。</p>
+    <br />
+    <p>共に歩むのは、一度に<strong>十二</strong>名までの魂。</p>
+    <p>歩むのは、日本の聖なる道—</p>
+    <p>導くのは、
+      <span class="fade">
+        <span class="with">母なる神</span>
+        <span>霊的な師</span>
+        <span>瞑想者</span>
+        <span>ヨガの指導者</span>
+        <span>直感の人</span>
+        <span>コーチ</span>
+        <span>癒し手</span>
+        <span>シャーマン</span>
+      </span>
+    </p>
+    <p>舞台ではなく、場を保つ者。</p>
+    <p>宗派は問わない。問われるのは「今ここ」に在ること。</p>
+    <br />
+    <p>これはリトリートではない。ツアーでもない。</p>
+    <p>これは巡礼。</p>
+    <p>ただ動くためでなく、魂が動かされるために。</p>
+  </div>
+
+  <div id="path7777" class="duck-break" onClick="rubber('準備');">☷☵☲<a href="#準備">
+    <span class="enso-inline">
+      <img src="/svg/icons/circle.svg" class="enso-icon" />
+      <span class="middle-path">☰</span>
+    </span>
+  </a>☲☵☷</div>
+
+  <div id="歩">
+    <h3>歩くということ</h3>
+    <p>日本では、巡礼は大地に刻まれている。</p>
+    <p>四国の八十八ヶ所。</p>
+    <p>熊野古道の古の道。</p>
+    <p>そして、静かな叡智が語る：</p>
+    <code>意志よりも、環境がすべてを超える。</code>
+    <br /><br />
+    <p>十〜十二日間の旅路。</p>
+    <p>宿から宿へと、軽やかに歩く—持つのは日帰り荷物のみ。</p>
+    <p>荷物は先に運ばれ、心は今に留まる。</p>
+    <br />
+    <p>一日のリズムは、静かに整う：</p>
+    <p><strong>歩く</strong>—気を巡らせ、思考をほどき、大地と触れる。</p>
+    <p><strong>語る</strong>—互いに映し合い、二人で歩み、相手を変えながら。</p>
+    <p><strong>坐る</strong>—沈黙が深まり、自然にその時が訪れたときに。</p>
+    <p>座って。立って。常に共に。</p>
+    <br />
+    <p>だが、これはプログラムではない。</p>
+    <p>固定されたカリキュラムもない。</p>
+    <p>導く者は、自らの道を持ち寄る—物語、静寂、アーサナ、そして存在。</p>
+    <p>起こることが、起こる。起きないことは、必要がない。</p>
+    <br />
+    <p>ある日は沈黙を招く。ある日は笑いがこだまする。</p>
+    <p>ある瞬間は共に。ある瞬間は完全にひとり。</p>
+    <br />
+    <p>日が暮れる頃、ひとつの卓を囲み、ひとつの会話を。</p>
+    <p>脇話も演出もない。ただ円—<strong>全体</strong>として。</p>
+    <br />
+    <p>湯が現れれば、湯に浸かる。</p>
+    <p>社が現れれば、礼を捧げる。</p>
+  </div>
+
+  <div id="path77777" class="duck-break" onClick="rubber('準備');">☷☵☲<a href="#準備">
+    <span class="enso-inline">
+      <img src="/svg/icons/circle.svg" class="enso-icon" />
+      <span class="middle-path">☰</span>
+    </span>
+  </a>☲☵☷</div>
+
+  <div id="不">
+    <h3><em>これは休暇ではない</em></h3>
+    <p>これは深い内なる旅—身体を<strong>器</strong>とし、道を<strong>鏡</strong>とする。</p>
+    <p>どこまで深く入るかは、自分次第。</p>
+    <p>我らは器を用意する。残りは、あなたのもの。</p>
+  </div>
+
+  <div id="path777777" class="duck-break" onClick="rubber('準備');">☷☵☲<a href="#準備">
+    <span class="enso-inline">
+      <img src="/svg/icons/circle.svg" class="enso-icon" />
+      <span class="middle-path">☰</span>
+    </span>
+  </a>☲☵☷</div>
+
+  <div id="贈">
+    <h3>「贈る」という実践</h3>
+    <p>𝕡𝕚𝕝𝕘𝕣𝕚𝕞𝕒𝕖は、透明さと信頼によって成り立つ。</p>
+    <p>宿、食事、移動などの共通費用はすべて公開。</p>
+    <p>自分の分だけを支払う。加算も隠しもなし。</p>
+    <br />
+    <p>その先には、自由な贈り物の機会がある。</p>
+    <p>義務ではなく、感謝として。</p>
+    <br />
+    <p>心動かされた分を捧げてください：</p>
+    <p>導師への<strong>お布施</strong>。</p>
+    <p>𝕡𝕚𝕝𝕘𝕣𝕚𝕞𝕒𝕖への<strong>寄付</strong>。</p>
+    <p>未来の巡礼者への<strong>贈り物</strong>。</p>
+    <br />
+    <p>それは支払いではなく、</p>
+    <p>この旅が開いた何かの反映として。</p>
+    <p>旅を続けるためではなく、</p>
+    <p>旅が与えてくれたものを分かち合いたくて。</p>
+    <br />
+    <p>それが、道を敬うということ。</p>
+    <p>波紋のように、広げていく。</p>
+  </div>
+
+  <div id="path7777777" class="duck-break" onClick="rubber('始');">☷☵☲<a href="#始">
+    <span class="enso-inline">
+      <img src="/svg/icons/circle.svg" class="enso-icon" />
+      <span class="middle-path">☰</span>
+    </span>
+  </a>☲☵☷</div>
+
+  <div id="準備">
+    <p>巡礼が終わるとき、新たな何かが始まる。</p>
+    <p>歩みは、あなたの内に残る。</p>
+    <p>沈黙は、響きを残す。</p>
+    <p>在ることは、在り続ける。</p>
+    <br />
+    <p>もし、感じるのなら—</p>
+    <p>胸の奥のかすかな震え、</p>
+    <p>「はい」と囁く小さな声を。</p>
+    <br />
+    <p>ならば、時は来たのかもしれない。</p>
+    <br />
+    <p>道は、常にあなたの前にあった。</p>
+    <p>今、それがあなたに歩むよう求めている。</p>
+    <p>あなたの前に常にあったものへと歩むその道を—</p>
+    <p>私たちと共に。</p>
+  </div>
+
+  <div id="始">
+    <code>千里の道も、一歩から</code>
+    <br />
+    <a href="https://pilgrima.ge">
+      <button class="button button--outline duck-break" onClick="duck('link');">
+        <div class="rubber">
+          <span style="--i:1">み</span>
+          <span style="--i:2">ち</span>
+          <span style="--i:3">を</span>
+          <span style="--i:4">ゆ</span>
+          <span style="--i:5">く</span>
+        </div>
+        <div class="duck">
+          <span style="--i:1">一</span>
+          <span style="--i:2">歩</span>
+          <span style="--i:3">踏</span>
+          <span style="--i:4">み</span>
+          <span style="--i:5">出</span>
+          <span style="--i:6">す</span>
+        </div>
+      </button>
+    </a>
+    <div>☷☵☲
+      <span class="enso-inline">
+        <img src="/svg/icons/circle.svg" class="enso-icon" />
+        <span class="middle-path">☰</span>
+      </span>
+      ☲☵☷
+    </div>
+  </div>
+</div>
+
+{{ end }}
