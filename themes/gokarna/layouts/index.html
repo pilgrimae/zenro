@@ -7,7 +7,12 @@
     {{ end }}
   </div>
 
-  <h1>{{ .Site.Title }}</h1>
+  <div class="title-wrapper-container">
+    <div class="title-wrapper">
+      <h1 class="title title-header stroke">{{ .Site.Title }}</h1>
+      <h1 class="title title-header fill">{{ .Site.Title }}</h1>
+    </div>
+  </div>
   {{ if isset .Site.Params "description" }}
   <h3>{{ .Site.Params.Description }}</h3>
   {{ end }}
